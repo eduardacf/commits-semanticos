@@ -27,17 +27,17 @@ public class CommitsApi {
 
     @GetMapping
     public ResponseEntity<String> getCommand(@RequestParam @Valid CommitsEnum commitsType,
-                                             @RequestParam @Valid String linkTask,
+                                             @RequestParam @Valid String task,
                                              @RequestParam @Valid String comment) {
 
-        return ResponseEntity.ok(commitsService.mountCommandCustom(commitsType.getCode(), linkTask, comment));
+        return ResponseEntity.ok(commitsService.mountCommandCustom(commitsType.getCode(), task, comment));
     }
 
     @GetMapping("/comments")
     public ResponseEntity<String> getCommitsComment(@RequestParam @Valid CommitsEnum commitsType,
-                                             @RequestParam @Valid String linkTask,
+                                             @RequestParam @Valid String task,
                                              @RequestParam @Valid String comment) {
 
-        return ResponseEntity.ok(commitsService.mountCommitsCustom(commitsType.getCode(), linkTask, comment));
+        return ResponseEntity.ok(commitsService.mountCommitsCustom(commitsType.getCode(), task, comment));
     }
 }

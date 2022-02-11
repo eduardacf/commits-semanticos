@@ -9,13 +9,13 @@ public class CommitsService {
     public String mountCommandCustom(String commitsType,
                                String linkTask,
                                String comment) {
-        return "git commit -m" + " \"" + verifyEmoji(commitsType) + " " + commitsType + ": " + comment + " - " + "see: " + linkTask + "\"";
+        return "git commit -m" + " \"" + verifyEmoji(commitsType) + " " + commitsType + ": " + comment + " \n\n" + "issue: " + linkTask + "\"";
     }
 
     public String mountCommitsCustom(String commitsType,
                                String linkTask,
                                String comment) {
-        return " \"" + verifyEmoji(commitsType) + " " + commitsType + ": " + comment + " - " + "see: " + linkTask + "\"";
+        return " \"" + verifyEmoji(commitsType) + " " + commitsType + ": " + comment + " \n\n" +"issue: " + linkTask + "\"";
     }
 
     public String verifyEmoji(String commitsType) {

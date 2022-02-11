@@ -26,6 +26,7 @@ dependencies {
     implementation 'jakarta.authorization:jakarta.authorization-api:2.0.0'
     implementation 'jakarta.authentication:jakarta.authentication-api:2.0.0'
     testImplementation 'io.projectreactor:reactor-test'
+    compileOnly group: 'com.github.jsimone', name: 'webapp-runner', version: '9.0.27.1'
     implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.13.1'
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude group: "org.junit.vintage", module: "junit-vintage-engine"

@@ -15,7 +15,7 @@ Sistema de geração de commits de forma semântica
 
 
 ##### (Sem emojis)
-**GET:** `/commits/custom` - Monta a estrutura do commit juntamente com o código do git (git commit ..... ) 
+**GET:** `/commits/custom` - Monta a estrutura do commit juntamente com o código do git (git commit ..... ) -
 
 **GET:** `/commits/comments/custom` - Monta o comentário para o commit.
 
@@ -45,6 +45,12 @@ O commit semântico possui os elementos estruturais abaixo (tipos), que informam
      (tipo) : (Descrição)
      [Linha em branco]
      (rodapé opcional)
+
+###  🔮 Personalizando commits com emojis
+
+Uma outra forma de identificar seus commits é por meio de emojis. Apesar de não serem uma forma oficial de padronizar seus commits, emojis podem ser muito uteis para indicar de uma forma rápida e bonita as alterações feitas em seu projeto.
+
+Abaixo segue uma lista com emojis e pra que situações eles podem ser utilizados.
 
 ### 🚀 Padrões de emojis
 

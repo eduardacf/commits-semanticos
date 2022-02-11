@@ -3,8 +3,6 @@
 Sistema de geração de commits de forma semântica
 </h2> 
 
-<img src='https://miro.medium.com/max/256/1*jHCCHizzA5H4VQ1ST1fA1A.png'</img>
-
 </center>
 
 

@@ -21,13 +21,13 @@ O commit semântico possui os elementos estruturais abaixo (tipos), que informam
 
 ### 🚀 Padrões de emojis
 
-                        | fix  | 🐛  |
-                        | ------------ | ------------ |
-                        |  feat | ✨  |
-                        |  docs | 📝  |
-                        |  style | 🎨  |
-                        |  refactor |  🔨 |
-                        |  build | 🚧  |
-                        |  test | ✅  |
-                        |  env | 💥  |
-                        |  chore | ➕  |
+| fix  | 🐛  |
+| ------------ | ------------ |
+|  feat | ✨  |
+|  docs | 📝  |
+|  style | 🎨  |
+|  refactor |  🔨 |
+|  build | 🚧  |
+|  test | ✅  |
+|  env | 💥  |
+|  chore | ➕  |

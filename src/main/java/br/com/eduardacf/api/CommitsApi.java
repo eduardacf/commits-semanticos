@@ -19,24 +19,25 @@ public class CommitsApi {
 
     private final Logger logger = LoggerFactory.getLogger(CommitsApi.class);
 
-    private final ObjectMapper objectMapper;
     private CommitsService commitsService;
 
-    public CommitsApi(ObjectMapper objectMapper, CommitsService commitsService) {
-        this.objectMapper = objectMapper;
+    public CommitsApi(CommitsService commitsService) {
         this.commitsService = commitsService;
     }
 
     @GetMapping
-    public ResponseEntity<String> getCommits(@RequestParam @Valid CommitsEnum tipoDeCommit,
+    public ResponseEntity<String> getCommand(@RequestParam @Valid CommitsEnum commitsType,
                                              @RequestParam @Valid String linkTask,
-                                             @RequestParam @Valid String comentario) {
+                                             @RequestParam @Valid String comment) {
 
-        return ResponseEntity.ok(commitsService.setCommit(tipoDeCommit.name().toLowerCase(Locale.ROOT), linkTask, comentario));
-//        logger.info("Iniciando chamada para listagem da pauta com id {}", idPauta);
-//        return pautaService.buscarPautaPorId(idPauta)
-//                .map(PautaResponseMapper::mapResponsePauta)
-//                .doOnSuccess(pautaResponse -> logger.info("Finalizando chamada de listagem da pauta {}", pautaResponse));
+        return ResponseEntity.ok(commitsService.mountCommand(commitsType.getCode(), linkTask, comment));
+    }
 
+    @GetMapping("/comments")
+    public ResponseEntity<String> getCommitsComment(@RequestParam @Valid CommitsEnum commitsType,
+                                             @RequestParam @Valid String linkTask,
+                                             @RequestParam @Valid String comment) {
+
+        return ResponseEntity.ok(commitsService.mountCommets(commitsType.getCode(), linkTask, comment));
     }
 }

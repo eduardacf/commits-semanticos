@@ -2,23 +2,28 @@ package br.com.eduardacf.type;
 
 public enum CommitsEnum {
 
-    FIX,
-    FEAT,
-    DOCS,
-    STYLE,
-    REFACTOR,
-    BUILD,
-    TEST,
-    ENV,
-    CHORE;
+    FIX("fix"),
+    FEAT("feat"),
+    DOCS("docs"),
+    STYLE("style"),
+    REFACTOR("refactor"),
+    BUILD("build"),
+    TEST("test"),
+    ENV("env"),
+    CHORE("chore");
 
 
-    CommitsEnum() {
+    private String code;
+
+    CommitsEnum(String code) {
+        this.code = code;
     }
 
+    public String getCode() {
+        return code;
+    }
 
-    @Override
-    public String toString() {
-        return super.toString();
+    public void setCode(String code) {
+        this.code = code;
     }
 }

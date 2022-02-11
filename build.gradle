@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.5.2'
     id 'io.spring.dependency-management' version '1.0.9.RELEASE'
     id 'java'
+    id 'war'
 }
 
 group = 'br.com.eduardacf.assembleia'
@@ -26,9 +27,23 @@ dependencies {
     implementation 'jakarta.authorization:jakarta.authorization-api:2.0.0'
     implementation 'jakarta.authentication:jakarta.authentication-api:2.0.0'
     testImplementation 'io.projectreactor:reactor-test'
-    compileOnly group: 'com.github.jsimone', name: 'webapp-runner', version: '9.0.27.1'
+    compileOnly group: 'com.github.jsimone', name: 'webapp-runner', version: '8.5.11.3'
     implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.13.1'
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude group: "org.junit.vintage", module: "junit-vintage-engine"
     }
+
+    task stage() {
+        dependsOn clean, war
+    }
+    war.mustRunAfter clean
+
+    task copyToLib(type: Copy) {
+        into "$buildDir/server"
+        from(configurations.compileOnly) {
+            include "webapp-runner*"
+        }
+    }
+
+    stage.dependsOn(copyToLib)
 }

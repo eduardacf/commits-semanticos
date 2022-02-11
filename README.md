@@ -4,6 +4,7 @@ Sistema de geração de commits de forma semântica
 </h2> 
 </center>
 ###  📚 Tipo e Descrição
+
 O commit semântico possui os elementos estruturais abaixo (tipos), que informam a intenção do seu commit ao utilizador(a) de seu código.
 
 - `fix` - Commits do tipo fix Essencialmente definem o tratamento de correções de bugs;

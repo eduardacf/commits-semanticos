@@ -2,7 +2,6 @@
 <h2>
 Sistema de geração de commits de forma semântica
 </h2> 
-
 </center>
 
 
@@ -56,7 +55,7 @@ O commit semântico possui os elementos estruturais abaixo (tipos), que informam
 #### Rodapé
 - Um rodapé **PODE** ser fornecido depois de uma linha em branco após o corpo.
 
-- Caso exista um ticket no jira, criar um referência assim: issue TP-666 ou closes issue TP-666
+- Caso exista um ticket no jira, criar um referência assim: **issue TP-666** ou **closes issue TP-666**
 
 
 ###  🔮 Personalizando commits com emojis

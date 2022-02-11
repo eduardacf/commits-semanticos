@@ -15,7 +15,7 @@ Sistema de geração de commits de forma semântica
 
 
 ##### (Sem emojis)
-**GET:** `/commits/custom` - Monta a estrutura do commit juntamente com o código do git (git commit ..... ) -
+**GET:** `/commits/custom` - Monta a estrutura do commit juntamente com o código do git (git commit ..... ) 
 
 **GET:** `/commits/comments/custom` - Monta o comentário para o commit.
 

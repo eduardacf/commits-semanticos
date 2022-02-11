@@ -4,8 +4,13 @@ Sistema de geração de commits de forma semântica
 </h2> 
 </center>
 
-### 📚 Tipo e Descrição
+###  📱 Endpoints:
 
+**GET:** `/commits`
+
+**GET:** `/commits/comments`
+
+###  📚 Tipo e Descrição
 O commit semântico possui os elementos estruturais abaixo (tipos), que informam a intenção do seu commit ao utilizador(a) de seu código.
 
 - `fix` - Commits do tipo fix Essencialmente definem o tratamento de correções de bugs;
@@ -26,19 +31,27 @@ O commit semântico possui os elementos estruturais abaixo (tipos), que informam
 
 - `chore` - Commits do tipo chore indicam atualizações de tarefas de build, configurações de administrador, pacotes... como por exemplo adicionar um pacote no gitignore. (Não inclui alterações em código)
 
+### ☄️ Estrutura de comentário de um commit
+
+>  (tipo) : (Descrição)
+
+> [Linha em branco]
+
+> (rodapé opcional)
+
+
 ### 🚀 Padrões de emojis
 
-| fix  | 🐛  |
+| Fix  | 🐛  |
 | ------------ | ------------ |
-|  feat | ✨  |
-|  docs | 📝  |
-|  style | 🎨  |
-|  refactor |  🔨 |
-|  build | 🚧  |
-|  test | ✅  |
-|  env | 💥  |
-|  chore | ➕  |
-
+|  Feat | ✨  |
+|  Docs | 📝  |
+|  Style | 🎨  |
+|  Refactor |  🔨 |
+|  Build | 🚧  |
+|  Test | ✅  |
+|  Env | 💥  |
+|  Chore | ➕  |
 
 
 

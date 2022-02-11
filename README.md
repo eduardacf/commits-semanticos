@@ -33,11 +33,12 @@ O commit semântico possui os elementos estruturais abaixo (tipos), que informam
 
 ### ☄️ Estrutura de comentário de um commit
 
->  (tipo) : (Descrição)
+```json
+ (tipo) : (Descrição)
+ [Linha em branco]
+ (rodapé opcional)
+```
 
-> [Linha em branco]
-
-> (rodapé opcional)
 
 
 ### 🚀 Padrões de emojis

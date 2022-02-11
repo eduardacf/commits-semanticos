@@ -5,10 +5,19 @@ Sistema de geração de commits de forma semântica
 </center>
 
 ###  📱 Endpoints:
+##### (Com emojis)
 
-**GET:** `/commits`
+**GET:** `/commits` - Monta a estrutura do commit juntamente com o código do git (git commit ..... )
 
-**GET:** `/commits/comments`
+**GET:** `/commits/comments` - Monta o comentário para o commit.
+
+------------
+
+
+##### (Sem emojis)
+**GET:** `/commits/custom` - Monta a estrutura do commit juntamente com o código do git (git commit ..... ) -
+
+**GET:** `/commits/comments/custom` - Monta o comentário para o commit.
 
 ###  📚 Tipo e Descrição
 O commit semântico possui os elementos estruturais abaixo (tipos), que informam a intenção do seu commit ao utilizador(a) de seu código.

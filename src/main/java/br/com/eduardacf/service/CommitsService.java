@@ -6,13 +6,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class CommitsService {
 
-    public String mountCommandCust(String commitsType,
+    public String mountCommandCustom(String commitsType,
                                String linkTask,
                                String comment) {
         return "git commit -m" + " \"" + verifyEmoji(commitsType) + " " + commitsType + ": " + comment + " - " + "see: " + linkTask + "\"";
     }
 
-    public String mountCommets(String commitsType,
+    public String mountCommitsCustom(String commitsType,
                                String linkTask,
                                String comment) {
         return " \"" + verifyEmoji(commitsType) + " " + commitsType + ": " + comment + " - " + "see: " + linkTask + "\"";

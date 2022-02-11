@@ -30,7 +30,7 @@ public class CommitsApi {
                                              @RequestParam @Valid String linkTask,
                                              @RequestParam @Valid String comment) {
 
-        return ResponseEntity.ok(commitsService.mountCommand(commitsType.getCode(), linkTask, comment));
+        return ResponseEntity.ok(commitsService.mountCommandCustom(commitsType.getCode(), linkTask, comment));
     }
 
     @GetMapping("/comments")
@@ -38,6 +38,6 @@ public class CommitsApi {
                                              @RequestParam @Valid String linkTask,
                                              @RequestParam @Valid String comment) {
 
-        return ResponseEntity.ok(commitsService.mountCommets(commitsType.getCode(), linkTask, comment));
+        return ResponseEntity.ok(commitsService.mountCommitsCustom(commitsType.getCode(), linkTask, comment));
     }
 }

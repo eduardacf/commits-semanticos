@@ -2,7 +2,12 @@
 <h2>
 Sistema de geração de commits de forma semântica
 </h2> 
+
+<img src="https://miro.medium.com/max/256/1*jHCCHizzA5H4VQ1ST1fA1A.png"
+</img>
+
 </center>
+
 
 ###  📱 Endpoints:
 ##### (Com emojis)
@@ -46,9 +51,20 @@ O commit semântico possui os elementos estruturais abaixo (tipos), que informam
      [Linha em branco]
      (rodapé opcional)
 
+#### Descrição
+- Fornece informações contextuais sobre as alterações no código.
+
+- Use para explicar "o que" e "porque" foi realizado essa modificação, ao invez de "como".
+
+#### Rodapé
+- Um rodapé **PODE** ser fornecido depois de uma linha em branco após o corpo.
+
+- Caso exista um ticket no jira, criar um referência assim: issue TP-666 ou closes issue TP-666
+
+
 ###  🔮 Personalizando commits com emojis
 
-Uma outra forma de identificar seus commits é por meio de emojis. Apesar de não serem uma forma oficial de padronizar seus commits, emojis podem ser muito uteis para indicar de uma forma rápida e bonita as alterações feitas em seu projeto.
+Uma outra forma de identificar seus commits é por meio de tipo+ emojis acrescentado. Apesar de não serem uma forma oficial de padronizar seus commits, emojis podem ser muito uteis para indicar de uma forma rápida e bonita as alterações feitas em seu projeto.
 
 Abaixo segue uma lista com emojis e pra que situações eles podem ser utilizados.
 
@@ -65,5 +81,18 @@ Abaixo segue uma lista com emojis e pra que situações eles podem ser utilizado
 |  Env | 💥  |
 |  Chore | ➕  |
 
+### Dicas para commits:
+
+❌ O que não fazer:
+
+> correcoes feitas
+
+> Aprimorado UI da página de login usando padrão definido no figma e react-responsive-caroussel no carrossel
+
+✅ O que fazer:
+
+> 🐛 bug - Imagens não aparecendo no login corrigido
+
+> 🎨 style - Estilização da página de login
 
 

@@ -14,7 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableSwagger2
-@PropertySource("classpath:swagger-v2.properties")
+@PropertySource("classpath:swagger.properties")
 @EnableWebMvc
 public class SwaggerConfig {
     @Bean

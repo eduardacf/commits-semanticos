@@ -18,13 +18,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableAutoConfiguration
 public class Swagger2Config {
 
-    @Value("${enable.swagger2}")
-    boolean enableSwagger2;
 
     @Bean
     public Docket swagger() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .enable(enableSwagger2)
                 .apiInfo(apiInfo())
                 .select()
                 .paths(PathSelectors.any())

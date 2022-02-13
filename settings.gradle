@@ -3,4 +3,4 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-rootProject.name = 'pauta-votacao'
+rootProject.name = 'commits-semanticos'

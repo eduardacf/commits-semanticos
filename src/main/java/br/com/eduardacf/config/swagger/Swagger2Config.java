@@ -37,23 +37,5 @@ public class Swagger2Config {
     private Predicate<String> paths() {
         return PathSelectors.regex("/v1.*");
     }
-
-
-//    @Bean
-//    public Docket api() {
-//        return new Docket(DocumentationType.SWAGGER_2)
-//                .select()
-//                .apis(RequestHandlerSelectors.basePackage("br.com.eduardacf"))
-//                .build()
-//                .apiInfo(apiInfo());
-//    }
-//
-//    private ApiInfo apiInfo() {
-//        return new ApiInfoBuilder()
-//                .title("Sistema de geração de commits de forma semântica")
-//                .version("1.0.0")
-//                .contact(new Contact("Eduarda Ferreira", "https://www.linkedin.com/in/eduarda-ferreira/", "eduarda.cferreira10@gmail.com"))
-//                .build();
-//    }
 }
 

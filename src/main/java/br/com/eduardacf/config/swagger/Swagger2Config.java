@@ -15,27 +15,32 @@ import java.util.function.Predicate;
 @Configuration
 public class Swagger2Config {
 
-
     @Bean
     Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(this.apiInfo())
+                .apiInfo(this.info())
                 .select()
                 .apis(RequestHandlerSelectors.any())
                 .paths(this.paths())
                 .build();
     }
 
-    public ApiInfo apiInfo() {
+    private ApiInfo info() {
         return new ApiInfoBuilder()
-                .title("Sistema de geração de commits de forma semântica")
-                .version("v1.0")
-                .contact(new Contact("Eduarda Ferreira", "https://www.linkedin.com/in/eduarda-ferreira/", "eduarda.cferreira10@gmail.com"))
+                .title("Projeto Ecommerce")
+                .description("Projeto final do módulo de Backend do Bootcamp UNIT.")
+                .version("pre-alpha")
+                .license("Mozilla Public License Version 2.0")
+                .licenseUrl("https://github.com/thiagojacinto/bootcamp-backend-spring/blob/main/LICENSE")
+                .contact(new Contact("Thiago Jacinto", "https://github.com/thiagojacinto", ""))
                 .build();
     }
 
     private Predicate<String> paths() {
         return PathSelectors.regex("/v1.*");
+//				.or(PathSelectors.regex("/*"));
     }
+
+
 }
 

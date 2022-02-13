@@ -36,7 +36,6 @@ public class Swagger2Config {
 
     private Predicate<String> paths() {
         return PathSelectors.regex("/v1.*");
-//				.or(PathSelectors.regex("/*"));
     }
 
 

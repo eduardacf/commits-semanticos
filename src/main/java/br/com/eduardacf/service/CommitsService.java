@@ -6,19 +6,32 @@ import org.springframework.stereotype.Service;
 @Service
 public class CommitsService {
 
-    public String mountCommandCustom(String commitsType,
+    public String mountCommandCustomizable(String commitsType,
                                String linkTask,
                                String comment) {
-        return "git commit -m" + " \"" + verifyEmoji(commitsType) + " " + commitsType + ": " + comment + " \n\n" + "issue: " + linkTask + "\"";
+        return "git commit -m" + " \"" + setEmoji(commitsType) + " " + commitsType + ": " + comment + " - " + "see: " + linkTask + "\"";
     }
 
-    public String mountCommitsCustom(String commitsType,
+    public String mountCommitsCustomizable(String commitsType,
                                String linkTask,
                                String comment) {
-        return " \"" + verifyEmoji(commitsType) + " " + commitsType + ": " + comment + " \n\n" +"issue: " + linkTask + "\"";
+        return " \"" + setEmoji(commitsType) + " " + commitsType + ": " + comment + " - " + "see: " + linkTask + "\"";
+    }
+    public String mountCommand(String commitsType,
+                                           String linkTask,
+                                           String comment) {
+        return "git commit -m" + " \""+ commitsType + ": " + comment + " - " + "see: " + linkTask + "\"";
     }
 
-    public String verifyEmoji(String commitsType) {
+    public String mountCommits(String commitsType,
+                                           String linkTask,
+                                           String comment) {
+        return ""+ commitsType + ": " + comment + " - " + "see: " + linkTask + "\"";
+    }
+
+
+    private static String
+    setEmoji(String commitsType) {
         String emojis;
         switch (commitsType) {
             case "fix":
@@ -47,7 +60,6 @@ public class CommitsService {
                 break;
             default:
                 emojis = "➕";
-                break;
         }
         return emojis;
 

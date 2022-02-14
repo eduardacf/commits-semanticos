@@ -5,7 +5,7 @@ plugins {
     id 'war'
 }
 
-group = 'br.com.eduardacf.assembleia'
+group = 'br.com.eduardacf'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -22,12 +22,12 @@ dependencies {
     implementation 'javax.validation:validation-api:2.0.1.Final'
     implementation 'javax.servlet:javax.servlet-api:4.0.1'
     implementation 'com.vdurmont:emoji-java:5.1.1'
-//    implementation 'jakarta.activation:jakarta.activation-api:2.0.1'
-//    testImplementation 'io.projectreactor:reactor-test'
-//    compileOnly group: 'com.github.jsimone', name: 'webapp-runner', version: '8.5.11.3'
-//    implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.13.1'
-//    testImplementation("org.springframework.boot:spring-boot-starter-test") {
-//        exclude group: "org.junit.vintage", module: "junit-vintage-engine"
-//    }
+    implementation 'jakarta.activation:jakarta.activation-api:2.0.1'
+    testImplementation 'io.projectreactor:reactor-test'
+    compileOnly group: 'com.github.jsimone', name: 'webapp-runner', version: '8.5.11.3'
+    implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.13.1'
+    testImplementation("org.springframework.boot:spring-boot-starter-test") {
+        exclude group: "org.junit.vintage", module: "junit-vintage-engine"
+    }
 
 }
